@@ -13,7 +13,6 @@ class ControlBase(QtWidgets.QWidget, ValueBase):
 			label: str = None,
 			variable_name: str = None,
 			value: typing.Any = None,
-			parent: QtWidgets.QWidget = None,
 			on_change: typing.Callable = None,
 			creat_change_event: bool = True,
 			**kwargs,
@@ -24,7 +23,7 @@ class ControlBase(QtWidgets.QWidget, ValueBase):
 		:param label: Text for the label.
 		:param variable_name: Variable name, if this control is inside a ControlledForm.
 		"""
-		QtWidgets.QWidget.__init__(self, parent=parent)
+		QtWidgets.QWidget.__init__(self)
 
 		if label is None:
 			if variable_name is None:

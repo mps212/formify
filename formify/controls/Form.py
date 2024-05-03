@@ -71,7 +71,6 @@ class Form(QtWidgets.QWidget, ValueBase):
 			variable_name: str = None,
 			value: typing.Any = None,
 			on_change: typing.Callable = None,
-			parent: QtWidgets.QWidget = None,
 			**kwargs,
 	):
 		"""
@@ -88,7 +87,7 @@ class Form(QtWidgets.QWidget, ValueBase):
 		:param parent:
 		"""
 
-		QtWidgets.QWidget.__init__(self, parent=parent)
+		QtWidgets.QWidget.__init__(self)
 		ValueBase.__init__(self, variable_name=variable_name, value=value, on_change=on_change)
 
 		layout = ensure_layout(layout)
